@@ -1,0 +1,176 @@
+@import '_reset.scss';
+@import '_startpage.scss';
+@import '_quizpage.scss';
+
+@mixin mobile{
+    @media screen and (min-width: 150px) and (max-width: 450px) {
+        @content;
+    }
+}
+
+$background_color: #007BFD;
+
+body {
+    background: #f8f8f8;
+    // background: linear-gradient(to right, #F6490F, #F27813, #EF9614);
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    border-radius: .5em;
+    width: 50%;
+    // min-width: 90%;
+    height: 500px;
+    background: white;
+    padding: 2em;
+    @include mobile{
+        width: 90%;
+        height: 97%;
+    }
+
+    .cover{
+        width: 100%;
+        height: 100%;
+
+        h2{
+            margin: 1.5em 0;
+            color: #486F8A;
+        }
+        form{
+            small{
+                color: red;
+            }
+            .input_group{
+                display: flex;
+                flex-direction: column;
+                margin: 1em 0;
+                
+                label{
+                    color: #486F8A;
+                    font-weight: 300;
+                }
+                input{
+                    margin: .5em 0;
+                    padding: 1em 0;
+                    padding-left: 1.5em !important;
+                    border: 1px solid grey;
+                    // border-bottom: 3px solid #249CF1;
+                }
+            }
+            button{
+                border-radius: .3em;
+                padding:1em 0;
+                text-align: center;
+                width: 100%;
+                background: #1997F0;
+                color: white;
+                border: none;
+                margin: 1em 0;
+                font-size: 1em;
+            }
+        }
+        
+    }
+    h2{
+        text-align: center;
+    }
+
+    .content{
+        margin: 1.5em 0;
+
+        .top_section{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @include mobile(){
+                margin-top: 2em;
+            }
+        }
+        #timingalert{
+            @include mobile(){
+                margin: 2em 0;
+            }
+        }
+        .question_area{
+            margin: 1em 0;
+
+            #question_text{
+                margin:1em 0;
+                font-weight: bold;
+                font-size: 1.5em;
+                @include mobile(){
+                    font-weight: bold;
+                    font-size: 1em;         
+                }
+            }
+
+            .option_area{
+                margin: 1em 0;
+                display: flex;
+                flex-direction: column;
+
+                button{
+                    width: 100%;
+                    text-align: left;
+                    padding: .5em 0;
+                    margin: .5em 0;
+                    font-size: 1em;
+                    font-weight: 700;
+                    cursor: pointer;
+                    padding-left: 1em !important;
+                    
+                    &:hover{
+                        background: #a5bcd4;
+                    }
+                }
+
+            }
+        }
+        .controls{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            button{
+                padding: .8em 1.5em;
+                font-size: 1em;
+                font-weight: 500;
+                cursor: pointer;
+                margin: 0 .5em;
+            }
+        }
+    }
+    
+}
+
+//special styles
+.button{
+    margin-top: .5em;
+    padding: .6em 1.5em;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 0 .5em;
+}
+.hide {
+    display: none;
+}
+.active{
+    background: black;
+    color: white;
+}
+//timer styles
+#timer_status{
+    background: orangered;
+    color: white;
+    padding: .7em;
+    border-radius: .2em;
+    @include mobile{
+        padding: .3em;
+    }
+}

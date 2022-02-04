@@ -1,0 +1,27 @@
+
+
+.content_rules{
+    text-align: center;
+    margin: 1em 0;
+    padding-left: 1em;
+
+    h2{
+        color: #486F8A;
+        margin: .5em 0;
+    }
+    ul{
+        list-style-type: upper-roman;
+        padding-left: .5em;
+        text-align: left!important;
+
+        li{
+            padding: .7em 0;
+        }
+    }
+    .button{
+        a{
+            color: #486F8A;
+            text-decoration: none;
+        }
+    }
+}

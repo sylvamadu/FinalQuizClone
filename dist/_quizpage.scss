@@ -1,0 +1,21 @@
+
+.endquiz{
+    text-align: center;
+
+    h2{
+        margin: 1em 0;
+    }
+
+    .quiz-repeat{
+        margin: 1.5em 0;
+
+        a{
+            border: 2px solid grey;
+            border-radius: .3em;
+            color: #486F8A;
+            text-decoration: none;
+            padding: 1em 2em;
+            margin: 1.5em 0;
+        }
+    }
+}
